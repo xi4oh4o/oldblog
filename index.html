@@ -4,17 +4,25 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Writings | 記事.</h1>
+  <h1 class="page-heading"># Aloha | こんにちは.</h1>
+  <div class="page-hello">
+      <ul>
+          <li>I'm Howe, aka xi4oh4o in elsewhere,now living in Zhengzhou, China.</li>
+<br>
+          <li>I work at Lonlife as a developer. I ❤ Programming and front-end design</li>
+      </ul>
+  </div>
+
+  <h1 class="page-heading"># Writings | 記事.</h1>
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+  <li>
+    <ul>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <li><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    </ul>
+  </li>
     {% endfor %}
   </ul>
 
