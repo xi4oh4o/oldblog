@@ -28,71 +28,29 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
-}
+    background-color: #f9f9f9;
+    min-height: 86px;
 
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
-
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+    // border-top: 1px solid $grey-color-light;
+    // padding: $spacing-unit 0;
+    .wrapper {
+        line-height: 86px;
+        text-align: center;
+        font-size: 12px;
+        @-webkit-keyframes blinker {
+          from {opacity: 1.0;}
+          to {opacity: 0.0;}
+        }
+        .blink{
+          text-decoration: blink;
+          -webkit-animation-name: blinker;
+          -webkit-animation-duration: 0.6s;
+          -webkit-animation-iteration-count:infinite;
+          -webkit-animation-timing-function:ease-in-out;
+          -webkit-animation-direction: alternate;
+        }
     }
 }
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-
 
 /**
  * Page content
@@ -102,7 +60,19 @@
 }
 
 .page-heading {
+    margin-top: 50px;
+    margin-bottom: 10px;
     font-size: 20px;
+    &:first-child {
+        margin-top: 0px;
+    }
+}
+
+.page-hello {
+    margin-bottom: 30px;
+    li {
+        list-style-type: none;
+    }
 }
 
 .post-list {
@@ -115,16 +85,14 @@
 }
 
 .post-meta {
-    font-size: $small-font-size;
     color: $grey-color;
+    font-size: 11px;
 }
 
 .post-link {
     display: block;
     font-size: 16px;
 }
-
-
 
 /**
  * Posts
