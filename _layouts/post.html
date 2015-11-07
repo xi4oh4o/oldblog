@@ -5,7 +5,7 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %b  %Y" }}</time>{% if site.author %} - by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="http://twitter.com/{{ site.twitter_username }}"><span itemprop="name">@{{ site.author }}</span></a></span>{% endif %}</p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -13,3 +13,15 @@ layout: default
   </div>
 
 </article>
+<div class="pagination">
+      {% if page.previous %}
+          <a class="page-nav" href="{{ site.baseurl }}{{ page.previous.url }}" id="js-previous-post">
+              &lt; {{ page.previous.title }}
+          </a>
+      {% endif %}
+      {% if page.next %}
+          <a class="page-nav" href="{{ site.baseurl }}{{ page.next.url }}" id="js-next-post">
+          {{ page.next.title }} &gt;
+          </a>
+      {% endif %}
+</div>
