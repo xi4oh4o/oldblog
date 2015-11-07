@@ -23,6 +23,12 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+
+    line-height: 1.8em;
+    font-family: "Cutive Mono", "Noto Sans SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
 }
 
 
