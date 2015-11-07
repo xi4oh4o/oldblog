@@ -9,7 +9,7 @@ disqus: y
 
 在执行 ```vagrant up``` 时出现下面的错误
 
-{% highlight shell %}
+{% highlight bash %}
 Failed to mount folders in Linux guest. This is usually beacuse
 the "vboxsf" file system is not available. Please verify that
 the guest additions are properly installed in the guest and

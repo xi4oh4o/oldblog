@@ -9,7 +9,7 @@ disqus: y
 
 安装imap-2007f
 
-{% highlight shell %}
+{% highlight bash %}
 yum insall pam-devel
 
 # Ubuntu 继续往下看
@@ -31,7 +31,7 @@ cp c-client/c-client.a /usr/local/imap-2007f/lib/libc-client.a
 
 PHP 编译加参数
 
-{% highlight shell %}
+{% highlight bash %}
 --with-imap=/usr/local/imap-2007f
 --with-imap-ssl
 {% endhighlight %}

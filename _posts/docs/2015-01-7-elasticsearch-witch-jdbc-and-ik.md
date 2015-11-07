@@ -34,7 +34,7 @@ cd $ES_HOME
 
 创建一个 JDBC river 注意加入 id as _vid 避免重复索引问题
 
-{% highlight shell %}
+{% highlight bash %}
 curl -XPUT 'localhost:9200/_river/my_jdbc_river/_meta' -d '{
     "type" : "jdbc",
     "jdbc" : {
@@ -50,7 +50,7 @@ curl -XPUT 'localhost:9200/_river/my_jdbc_river/_meta' -d '{
 
 测试一下结果
 
-{% highlight shell %}
+{% highlight bash %}
 curl -XGET 'localhost:9200/your_index_name/_search?pretty&q=*'
 {% endhighlight %}
 
@@ -64,7 +64,7 @@ curl -XGET 'localhost:9200/your_index_name/_search?pretty&q=*'
 
 #### *注意* 如果你使用最新版的 elasticsearch 应 clone 源码用并用 mvn package 命令打包，下载 elasticsearch-rtf 中的版本只对应 elasticsearch 1.0.x，会导致无法工作。
 
-{% highlight shell %}
+{% highlight bash %}
 git clone https://github.com/medcl/elasticsearch-analysis-ik.git
 
 cd elasticsearch-analysis-ik
