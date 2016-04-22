@@ -41,11 +41,9 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 0;
 }
 
-p, blockquote {
+p, blockquote, figure {
   margin: 0 0 25px 0;
 }
-
-
 
 /**
  * Images
